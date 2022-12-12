@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+    <br>
+{% block body %}
+     <h1>Create New page</h1>
+
+     <form method = "post" action=" {% url 'encyclopedia:createdpage'%}" >
+         {% csrf_token %}
+         {{ title }}
+         {{ content }}
+     <input type="submit" style name="Save Page" value="Save Page">
+     </form>
+
+     <!-- <textarea id="text" name="Input Markdown content for new page" rows="8" cols="80"></textarea> -->
+
+{% endblock %}
