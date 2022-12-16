@@ -10,7 +10,7 @@
     <ul>
         {% for entry in results %}
             <li>
-                <a href="http://127.0.0.1:8000/{{entry}}">{{entry}}</a>
+                <a href="{% url 'encyclopedia:entry' entry=entry %}">{{entry}}</a>
             </li>
         {% endfor %}
     </ul>

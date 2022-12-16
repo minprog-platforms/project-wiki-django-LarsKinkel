@@ -6,5 +6,10 @@
 
 {% block body %}
     <h1>Error Page</h1>
-    <p>The page that you try to visit does not exist. </p>
+
+    {% if not exists%}
+        <p>The page that you try to visit does not exist. </p>
+    {% else %}
+        <p>The page that you try to make already exists. </p>
+    {% endif  %}
 {% endblock %}

@@ -24,7 +24,8 @@ def entry(request, entry):
             })
     else:
         return render(request, "encyclopedia/error.html", {
-            "form" : SearchEntryForm()
+            "form" : SearchEntryForm(),
+            "exists": False
             })
 
 def searchentry(request):
@@ -57,7 +58,6 @@ def createnew(request):
     return render(request, "encyclopedia/createnew.html", {
         "form" : SearchEntryForm(),
         "title": CreatePageForm()
-
         })
 
 def createdpage(request):
@@ -65,6 +65,11 @@ def createdpage(request):
         page = CreatePageForm(request.POST)
         if page.is_valid():
             title = page.cleaned_data['title']
+            if title in util.list_entries():
+                return render(request, "encyclopedia/error.html", {
+                    "form" : SearchEntryForm(),
+                    "exists": True
+                    })
             content = page.cleaned_data['content']
             util.save_entry(title, content)
 
