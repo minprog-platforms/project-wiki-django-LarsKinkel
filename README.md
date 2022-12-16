@@ -13,3 +13,9 @@ Pull the repository from github to your computer, then get the app running by ty
 ## Rough sketch of the pages
 
 ![image](https://github.com/minprog-platforms/project-wiki-django-LarsKinkel/blob/main/Sketch/sketchwiki.jpg?raw=true)
+
+## Guidelines producing designdocument
+
+In order to create a new page, I first have to create an url path in the urls.py, then i would create a function in views.py to decide what the page should do and what special variables should be handed to the website. At last, I need to create an html file to decide how the actual page is going to look like.
+
+Html pages that i will certainly need are: homepage, entrypage, an errorpage and a page to create a new entry.
