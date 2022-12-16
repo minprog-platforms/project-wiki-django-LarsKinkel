@@ -12,4 +12,4 @@ Pull the repository from github to your computer, then get the app running by ty
 
 ## Rough sketch of the pages
 
-![image](/Users/larskinkel/Documents/Programming/Programmeerproject/Wiki/project-wiki-django-LarsKinkel/Sketch/sketchwiki.jpg)
+![image](https://github.com/minprog-platforms/project-wiki-django-LarsKinkel/blob/main/Sketch/sketchwiki.jpg?raw=true)
